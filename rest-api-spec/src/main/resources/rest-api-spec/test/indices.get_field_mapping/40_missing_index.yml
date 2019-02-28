@@ -1,0 +1,11 @@
+---
+"Raise 404 when index doesn't exist":
+
+  - do:
+      catch: missing
+      indices.get_field_mapping:
+        include_type_name: false
+        index: test_index
+        fields: field
+
+
